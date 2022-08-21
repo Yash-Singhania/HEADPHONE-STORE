@@ -1,188 +1,212 @@
-/* Removeing styles added by browser */
-body{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'sans-serif';
+    font-family: "Poppins";
 }
 
-/* Styleing Navbar */
-nav{
+body {
+    margin: 50px 50px;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
-    margin-left: 8%;
+    align-items: center;
 }
 
-.nav-items{
+.nav-items {
+    flex: 90;
+    display: flex;
+
+    justify-content: center;
+    gap: 60px;
+
+    font-size: 25px;
+}
+
+.active-item {
+    color: #FD582F;
+}
+
+.intro-section {
     display: flex;
 }
 
-.nav-items .nav-item{
-    margin-left: 15%;
-    font-size: 20px;
+.left-section {
+    padding-top: 30px;
 }
 
-nav .logo{
-    width: 100px;
+.left-section h3 {
+    font-size: 40px;
+    font-weight: 400;
 }
 
-.nav-item:first-child{
-    color: #ff4500;
+.left-section h1 {
+    font-size: 80px;
+    font-family: "Fredoka One";
+    font-weight: 400;
 }
 
-/* Styleing Intro Section */
-.intro-section{
-    display:flex;
-    margin-left: 8%;
-    margin-top: -1%;
+.sub-headlines {
+    padding-top: 30px;
+    padding-left: 100px;
 }
 
-/* Left Section */
-.left-section h3{
-    font-size: 28px;
-    font-weight: 500;
-}
+.sub-headline {
+    font-size: 30px;
+    font-weight: 400;
+}    
 
-.left-section h3 img{
-    width: 40px;
-    margin: 5% 0 0 3%;
-}
-
-.left-section h1{
-    font-family: 'comic sans ms';
-    font-size: 50px;
-    margin-top: -5%;
-}
-
-.sub-headlines{
-    margin-left: 12%;
-    font-size: 20px;
-    margin-top: 25px;
-
-}
-
-.sub-headlines .sub-headline{
-    margin-top: -15px;
-}
-
-.sub-headlines .sub-headline::before{
-    content: "+";
-    text-align: center;
-    background-color: #ff4500;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    font-size: 22px;
-    padding: 5px;
-    color: #fff;
-    font-weight: 100;
-}
-
-.text{
-    margin-top: 5%;
-    width: 560px;
-    font-size: 12px;
-}
-
-.action-btn{
-    background-color: #ff4500;
-    padding: 10px 20px;
+.sub-headline img {
+    background-color: #FD582D;
+    padding: 5px 5px;
     border-radius: 30px;
-    font-size: larger;
-    border: none;
-    color: #fff;
-    margin-top: 3%;
-    margin-right: 50px;
+
+    position: relative;
+    top: 9px;
 }
 
-/* Right Section */
-.right-section{
+.text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button {
+    background-color: #FE5B32;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+.right-section {
     position: relative;
 }
 
-.discount-content + img{
-    width: 380px;
+.discount,.discount-content {
     position: absolute;
-    top: 0%;
-    right: -150%;
 }
 
-.discount{
-    position: absolute;
-    width: 125px;
-    top: 45%;
-    right: 5%;
-    z-index: 1;
+.discount {
+    top: 270px;
+    left: -35px;
+
+    height: 150px;
 }
 
-.discount-content{
-    position: absolute;
-    top: 48%;
-    z-index: 1;
-    color: #fff;
-    left: 45%;
+.discount-content {
+    top: 300px;
+    left: -5px;
 }
 
-.discount-content h1{
-    font-family: 'comic sans ms';
-    font-weight: 900;
-    margin-top: -40%;
-    font-size: 40px;
+.discount-content h1 {
+    font-family: "Fredoka One";
+    color: #FFFFFF;
+    font-size: 50px;
 }
 
-.dots{
+.discount-content h4 {
+    color: #FFFFFF;
+    font-size: 14px;
+    
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.dots {
     display: flex;
-    position: absolute;
-    top: 85%;
-    left: 110%;
+    justify-content: center;
+    gap: 20px
 }
 
 .dot {
-    width: 30px;
-    height: 30px;
-    background-color: #ffff00;
-    border-radius: 30px;
-    margin-right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
-.tomato-dot{
-    background-color: #ff6347;
+.yellow-dot {
+    content: linear-gradient(#FBD104, #FBD104);
 }
 
-.black-dot{
-    background-color: #000;
+.tomato-dot {
+    content:  linear-gradient(#FE5E35, #FE5E35)
 }
 
-.right-section .action-btn{
-    position: inherit;
-    top: 95%;
-    left: 110%;
+.black-dot {
+    content:  linear-gradient(#000000,#000000)
 }
 
-/* Extra's */
-
-button:hover{
-    background-color: #c43d0c;
-    cursor: pointer;
+.headset {
+    height: 500px;
 }
 
-.sub-headline:hover {
-    margin-left: 5%;
-    cursor: pointer;
-}
+@media (max-width: 430px) {
+    
+    body > nav:nth-child(1) > img:nth-child(3) {
+        display: none;
+    }
 
-.logo:hover{
-    opacity: 0.5;
-    cursor: pointer;
-}
+    body {
+        margin: 10px 15px;
+    }
 
-::selection{
-    background-color: #ff4500;
-}
+    .nav-items {
+        display: none;
+    }
 
-.dot:hover{
-    opacity: 0.6;
-    cursor: pointer;
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .left-section h3 {
+        font-size: 30px;
+    }
+
+    .left-section h3 img {
+        width: 40px
+    }
+
+    .left-section h1 {
+        font-size: 60px;
+    }
+
+    .sub-headlines {
+        padding: 0;
+        padding-top: 50px;
+    }
+
+    .discount {
+        width: 95px;
+        height: auto;
+
+        left: 10px;
+    }
+
+    .discount-content {
+        top: 290px;
+        left: 30px;
+    }
+
+    .discount-content h4{
+        font-size: 7px;
+    }
+
+    .discount-content h1 {
+        font-size: 30px;
+    }
+
+    .headset {
+        width: 400px;
+        height: auto;
+    }
+
+    button.action-btn:nth-child(3) {
+        margin-top: 50px;
+        margin-left: 25%;
+    }
 }
